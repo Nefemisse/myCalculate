@@ -18,12 +18,9 @@
 let π = Math.PI;
 let historique = document.getElementById("outputHistorique").innerHTML;
 let valu = document.getElementById("output").innerHTML
-historique = [];
-let exp = Math.pow;
+historique;
+let x = Math.pow(valu*valu);
 let button = document.getElementsByClassName('button');
-let buttons = [];
-exp = "x²";
-
 
 // Clear function
 let output = document.getElementById("output")
@@ -63,36 +60,13 @@ const egal = () => {
     document.getElementById("outputHistorique").innerHTML += result + '<hr>' ;
 }
 
-const square = (valu) => {
-    let squareResult = valu * valu
-    document.getElementById('output').innerHTML = squareResult
-}
-
-document.getElementsByClassName('button');
-
-
-//outputHistorique
-
-// const historique = document.getElementById('historique');
-// historique.style.position = "absolute";
-// let leftPos = 0
-
-// function gaucheDroite() {
-//     for(leftPos = 0 ; leftPos <= 300 ; leftPos += 2) {
-//         historique.style.left = `${leftPos}px`;
-//         requestAnimationFrame(gaucheDroite);
-//     }
-// }
-
-// requestAnimationFrame(gaucheDroite)
-
-const bonus = (n) => {
-
-    nbr = parseFloat(document.touches.button.value)
+function square(valu){
+    valu = document.getElementById("output").innerHTML;
+    removeZero()
     console.log(valu)
-    switch (n) {
-        case 1:document.touches.button.value = Math.sqrt(nbr);
-        case 2:document.touches.button.value = Math.PI(nbr);
-        case 3:document.touches.button.value = Math.exp(nbr);
-    }
-}
+    // stock le résultat
+    var resultat = parseFloat(valu) * parseFloat(valu);
+
+    document.getElementById('finalOutput').innerHTML = resultat;
+    document.getElementById("outputHistorique").innerHTML += resultat + '<hr>' ;
+  }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" lang="javascript" src="/js/jQuery.min.js"></script>
+        <!-- <script type="text/javascript" lang="javascript" src="/js/jQuery.min.js"></script> -->
         <link rel="stylesheet" href="./style.css">
         <title>Ma calculatrice</title>
 </head>
@@ -19,7 +19,7 @@
                 <button id="r1-1" name="button" class="clearAll" onclick="clearAll() ">C</button>
                 <button id="r1-2" name="button" class="button" value="%" onclick="fordisplay('%') ">%</button>
                 <button id="r1-3" name="button" class="button" value="π" onclick="fordisplay('π') ">π</button>
-                <button id="r1-3" name="button" class="button" value="x²" onclick="fordisplay('x²')">x²</button>
+                <button id="r1-3" name="button" class="button" value="x²" onclick="fordisplay('x²'), square()">x²</button>
                 <button id="r1-3" name="button" class="button" value="Reset history" onclick="clearHistory() ">Reset history</button>
                 <button id="r1-3" name="button" class="button" value="(" onclick="fordisplay('(') ">(</button>
                 <button id="r1-3" name="button" class="button" value=")" onclick="fordisplay(')') ">)</button>
@@ -48,7 +48,7 @@
     </div>
     <!-- <script>document.addEventListener("DOMContentLoaded", function(event) {   html()  })
     </script> -->
-    <script> 
+    <!-- <script> 
         function slide() {
             document.querySelector('#historique').classList.toggle('active')
         }
@@ -58,7 +58,7 @@
                 {"right": io ? -100 : -150}, 200);
             });
         });
-    </script>
+    </script> -->
     <script type="text/javascript" src="./script2.js"></script>
 </body>
 </html>
