@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" lang="javascript" src="/js/jQuery.min.js"></script>
+        <link rel="stylesheet" href="./style.css">
+        <title>Ma calculatrice</title>
+</head>
+<body>
+    <div id="calculatrice">
+        <div class="calculatrice">
+            <div id="ecran">
+                <p id="output">0</p>
+                <p id="finalOutput">0</p>
+            </div>
+            <div class="touches" id="touche" name="touches">
+                <button id="r1-1" name="button" class="clearAll" onclick="clearAll() ">C</button>
+                <button id="r1-2" name="button" class="button" value="%" onclick="fordisplay('%') ">%</button>
+                <button id="r1-3" name="button" class="button" value="π" onclick="fordisplay('π') ">π</button>
+                <button id="r1-3" name="button" class="button" value="x²" onclick="fordisplay('x²')">x²</button>
+                <button id="r1-3" name="button" class="button" value="Reset history" onclick="clearHistory() ">Reset history</button>
+                <button id="r1-3" name="button" class="button" value="(" onclick="fordisplay('(') ">(</button>
+                <button id="r1-3" name="button" class="button" value=")" onclick="fordisplay(')') ">)</button>
+                <button id="r1-4" name="button" class="button" value="/" onclick="fordisplay('/') ">/</button>
+                <button id="r2-1" name="button" class="button" value="7" onclick="fordisplay('7') ">7</button>
+                <button id="r2-2" name="button" class="button" value="8" onclick="fordisplay('8') ">8</button>
+                <button id="r2-3" name="button" class="button" value="9" onclick="fordisplay('9') ">9</button>
+                <button id="r2-4" name="button" class="button" value="*" onclick="fordisplay('*') ">x</button>
+                <button id="r3-1" name="button" class="button" value="4" onclick="fordisplay('4') ">4</button>
+                <button id="r3-2" name="button" class="button" value="5" onclick="fordisplay('5') ">5</button>
+                <button id="r3-3" name="button" class="button" value="6" onclick="fordisplay('6') ">6</button>
+                <button id="r3-4" name="button" class="button" value="-" onclick="fordisplay('-') ">-</button>
+                <button id="r4-1" name="button" class="button" value="1" onclick="fordisplay('1') ">1</button>
+                <button id="r4-2" name="button" class="button" value="2" onclick="fordisplay('2') ">2</button>
+                <button id="r4-3" name="button" class="button" value="3" onclick="fordisplay('3') ">3</button>
+                <button id="r4-4" name="button" class="button" value="+" onclick="fordisplay('+') ">+</button>
+                <button id="r5-1" name="button" class="button" value="0" onclick="fordisplay('0') ">0</button>
+                <button id="r5-2" name="button" class="button" value="." onclick="fordisplay('.') ">.</button>
+                <button id="r5-3" name="button" class="button" onclick="egal() ">=</button>
+            </div>
+        </div>
+        <div id="historique" onclick="slide()">
+            <h4 class="historique">Historique</h4>
+            <p id="outputHistorique"></p>
+        </div>
+    </div>
+    <!-- <script>document.addEventListener("DOMContentLoaded", function(event) {   html()  })
+    </script> -->
+    <script> 
+        function slide() {
+            document.querySelector('#historique').classList.toggle('active')
+        }
+        $(() => {
+            $("#historique").click(() => {
+                $("#historique").animate(
+                {"right": io ? -100 : -150}, 200);
+            });
+        });
+    </script>
+    <script type="text/javascript" src="./script2.js"></script>
+</body>
+</html>
+
